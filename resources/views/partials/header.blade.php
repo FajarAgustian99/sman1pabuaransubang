@@ -12,7 +12,7 @@
                         <li><a href="{{ route('sejarahvisimisi') }}">Sejarah & Visi Misi</a></li>
                         <li><a href="{{ route('guru-staff') }}">Guru & Staff</a></li>
                         <li><a href="{{ route('struktur-organisasi') }}">Struktur Organisasi</a></li>
-                        <li><a href="fasilitas.html">Fasilitas</a></li>
+                        <li><a href="{{ route('fasilitas') }}">Fasilitas</a></li>
                     </ul>
                 </li>
                 <li><a href="akademik.html">Akademik</a></li>

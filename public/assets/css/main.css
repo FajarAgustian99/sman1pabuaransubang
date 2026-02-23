@@ -1232,6 +1232,21 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Facility Section Style
+--------------------------------------------------------------*/
+.facility-img {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.facility-img img {
+    width: 250px; 
+    height: auto;
+    display: block;
+}
+
+/*--------------------------------------------------------------
 # Trainers Index Section
 --------------------------------------------------------------*/
 .trainers-index .member {
@@ -1781,4 +1796,5 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+
 }
