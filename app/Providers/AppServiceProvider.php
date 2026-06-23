@@ -24,22 +24,30 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::share(
-            'footerSetting',
-            FooterSetting::first()
-        );
+        try {
+            View::share(
+                'footerSetting',
+                FooterSetting::first()
+            );
 
-        View::share(
-            'contactSetting',
-            ContactSetting::first()
-        );
+            View::share(
+                'contactSetting',
+                ContactSetting::first()
+            );
+        } catch (\Throwable $e) {
+            View::share('footerSetting', null);
+            View::share('contactSetting', null);
+        }
 
         View::composer('*', function ($view) {
-
-            $view->with(
-                'headerSetting',
-                HeaderSetting::first()
-            );
+            try {
+                $view->with(
+                    'headerSetting',
+                    HeaderSetting::first()
+                );
+            } catch (\Throwable $e) {
+                $view->with('headerSetting', null);
+            }
         });
     }
 }
